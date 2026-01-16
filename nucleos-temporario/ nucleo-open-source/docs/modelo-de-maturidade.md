@@ -8,18 +8,28 @@ O objetivo do modelo é:
 * Guiar a evolução e priorização de esforços
 * Manter o modelo leve, simples e aplicável a todos os tipos de projetos
 
-> Observação importante: O **nível final do projeto é determinado pelo fator de maior impacto** entre colaboradores e usuários externos. Se uma dimensão coloca o projeto em nível mais alto, o nível final será esse.
-
 ---
 
 ## Tabela de Níveis por Engajamento
 
-| Nível   | Engajamento interno (colaboradores) | Engajamento externo (usuários) | Impacto final           |
-| ------- | ----------------------------------- | ------------------------------ | ----------------------- |
-| Nível 1 | 1–2                                 | 1–10                           | Nível 1 se ambos baixos |
-| Nível 2 | 3–5                                 | 10–100                         | Maior entre os dois     |
-| Nível 3 | 5–10+                               | 100–1000                       | Maior entre os dois     |
-| Nível 4 | 10+                                 | >1000                          | Maior entre os dois     |
+| Nível   | Engajamento interno (pessoas colaboradoras) | Engajamento externo (pessoas usuárias) | Impacto final           |
+| ------- | ------------------------------------------- | -------------------------------------- | ----------------------- |
+| Nível 1 | 1–2                                         | 1–10                                   | Nível 1 se ambos baixos |
+| Nível 2 | 3–5                                         | 10–100                                 | Maior entre os dois     |
+| Nível 3 | 5–10                                        | 100–1000                               | Maior entre os dois     |
+| Nível 4 | 10+                                         | >1000                                  | Maior entre os dois     |
+
+O **nível final do projeto é determinado pelo fator de maior impacto** entre pessoas colaboradoras e pessoas usuárias externas. Se uma das dimensões posiciona o projeto em um nível mais alto, **esse será o nível final**.
+
+Os números acima **não estão “escritos em pedra”**. Eles servem como referência para ajudar a entender onde o projeto se encaixa melhor, não como limites rígidos. Bem como, a forma de contar **pessoas colaboradoras** e **pessoas usuárias** depende do contexto do projeto: podem ser pessoas ativas em um período específico, totais acumulados, contribuições recorrentes ou pontuais. **Adapte os critérios às suas necessidades**, mantendo consistência e bom senso.
+
+### Exemplos
+
+Um projeto com **2 pessoas colaboradoras**, mas **300 pessoas usuárias**, se enquadra como **Nível 1** em engajamento interno e **Nível 3** em engajamento externo. **Nível final: Nível 3**, pois o impacto das mudanças afeta muitas pessoas.
+
+Da mesma forma, um projeto com **8 pessoas colaboradoras** e apenas **20 pessoas usuárias** também será **Nível 3**.
+
+> O nível mais alto sempre prevalece porque representa o **maior risco de impacto, coordenação e comunicação** — é nesse ponto que o projeto precisa de mais estrutura.
 
 ---
 

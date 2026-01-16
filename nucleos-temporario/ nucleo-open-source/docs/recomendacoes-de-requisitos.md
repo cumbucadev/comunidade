@@ -111,8 +111,8 @@ Deixe explícito:
 * Crie **templates de PRs** para padronizar descrições e checklist de revisões
 * Crie **templates de Issues** para bugs, features e dúvidas
 * Exemplos de referência:
-  * https://github.com/brazilian-utils/python/.github/ISSUE_TEMPLATE
-  * https://github.com/brazilian-utils/python/.github/PULL_REQUEST_TEMPLATE.md
+  * https://github.com/brazilian-utils/python/tree/main/.github/ISSUE_TEMPLATE
+  * https://github.com/brazilian-utils/python/tree/main/.github/pull_request_template.md
 
 ##### Categoria de Discussions: RFC & ADR
 
