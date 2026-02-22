@@ -36,46 +36,14 @@ Pessoas com atividade recorrente e responsabilidades específicas no núcleo.
 - Comunicação assíncrona: núcleo-eventos no Slack
 
 ### 🧭 Fluxo de Trabalho
-Para evitar conflitos e manter a `main` protegida, seguimos este fluxo no repositório:
+Nosso fluxo de trabalho funciona assim aqui no núcleo:
 
-1. **Faça um fork do repositório oficial**  
-   - Acesse o repositório comunidade da Cumbuca Dev  
-   - Clique em **Fork**
-   - Agora você terá uma cópia no seu GitHub.
+1. **Fazemos reuniões semanais**  
+   - Caso queira participar, entre em contato por meio da comunidade do WhatsApp ou LinkedIn de alguma das integrantes do núcleo: [Clarice Regina](https://www.linkedin.com/in/clariceregina/), [Maria Maia](https://www.linkedin.com/in/antoniamaia/), [Rafaela Galembeck](https://www.linkedin.com/in/rafaelagalembeck/) e [Letícia Silva](https://www.linkedin.com/in/leticiasilvar/)
 
-   Guia de Forks (para pessoas iniciantes): 
-https://cumbucadev.gitbook.io/github-essentials/dia-11/forks-e-pull-requests/criando-um-fork-no-github
+2. **Criamos issues com as atividades**
 
-2. **Escolha uma tarefa nas Issues**  
-   - Vá em *Issues*  
-   - Filtre pela label do seu núcleo  
-   - Escolha uma tarefa  
-   - Comente algo parecido com: *"Posso trabalhar nesta issue?”*
-
-3. **Crie uma branch no seu fork**  
-   Nome padrão sugerido: Número de identificação da Issue
-
-   Guia de Issues (para pessoas iniciantes):  
-https://cumbucadev.gitbook.io/github-essentials/dia-8
-
-4. **Faça as alterações no seu fork**  
-   - Organize commits pequenos e bem descritos  
-
-5. **Abra um Pull Request para o repositório oficial**  
-   - Origem: sua branch no seu fork  
-   - Destino: `main` do repositório oficial  
-   - Sempre incluir na descrição:
-     - resumo do que foi feito
-     - checklist do que está completo ou em andamento
-     - closes #link da issue
-
-6. **Aguarde revisões**  
-   - Pelo menos **1 pessoa mantenedora** do núcleo precisa revisar  
-   - Ajustes podem ser solicitados  
-   - Tudo com calma e paciência, ninguém aqui corre 💜
-
-7. **Merge aprovado**  
-   - A pessoa responsável pelo PR faz o merge!
+3. **Definimos quem fará cada atividade**
 
 ---
 
