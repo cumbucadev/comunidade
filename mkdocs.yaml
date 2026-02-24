@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+#######
+# General metadata
+#######
+site_name: Cumbuca Docs
+site_url: https://docs.cumbuca.dev
+repo_url: http://github.com/cumbucadev/comunidade
+site_author: cumbuca.dev
+copyright: "2026, cumbuca.dev"
+site_description: Documentação oficial da comunidade da Cumbuca Dev
+
+#######
+# Theme settings
+#######
+theme:
+  name: material
+  logo: assets/img/logo-transparent.png
+  favicon: assets/img/logo-transparent.png
+  language: pt-BR
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.share
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: cumbuca
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+#######
+# Docs settings
+#######
+nav:
+  - Página inicial:
+      - Boas-vindas!: index.md
+  - Código de Conduta: codigo-de-conduta.md
+  - Como contribuir:
+      - contribuindo/index.md
+      - Templates:
+          - Ata de Reunião: contribuindo/templates/template-ata-reuniao.md
+          - Guia do Núcleo: contribuindo/templates/template-nucleo.md
+
+#######
+# Development settings
+#######
+watch:
+  - docs
+
+#######
+# Docs settings
+#######
+use_directory_urls: true
+
+#######
+# Plugins/extensions settings
+#######
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - abbr # Abbreviations support
+  - attr_list # Attribute lists for elements
+  - def_list # Definition lists
+  - meta # Metadata support
+  - sane_lists # Better handling of lists
+  - smarty # Smart punctuation
+  - toc: # Table of contents settings
+      toc_depth: 2-4
+  - pymdownx.emoji: # Emoji support
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - assets/css/cumbuca.css

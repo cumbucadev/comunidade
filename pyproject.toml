@@ -1,0 +1,26 @@
+[project]
+name = "cumbuca.docs"
+version = "0.1.0"
+description = "Documentação da comunidade Cumbuca Dev - recursos, guias e referências para pessoas da comunidade"
+authors = [
+  {name = "Cumbuca Dev", email = "opensource@cumbuca.dev"}
+]
+license = { text = "GPL-3.0" }
+requires-python = ">=3.13,<4"
+dependencies = [
+  "mkdocs (>=1.6.1,<2.0.0)",
+  "mkdocs-material (>=9.7.1,<10.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
+[dependency-groups]
+dev = [
+  "pre-commit (>=4.5.1,<5.0.0)"
+]

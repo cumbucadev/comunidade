@@ -1,0 +1,7 @@
+{
+    "config": {
+        "MD013": false, // Disable line length rule,
+        "MD033": false, // Allow raw HTML in Markdown
+        "MD041": false // Allow multiple top-level headers in a file
+    }
+}
