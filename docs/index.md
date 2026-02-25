@@ -1,4 +1,4 @@
-![Logo da Cumbuca Dev](https://github.com/cumbucadev/brand/raw/main/images/github-hero-light.png)
+![Logo da Cumbuca Dev](https://github.com/cumbucadev/brand/raw/main/images/github-hero-dark.png)
 
 A **Cumbuca Dev** é uma organização dedicada a promover diversidade e inclusão no setor de tecnologia por meio de educação e código aberto. Nosso objetivo é empoderar grupos minoritários, oferecendo oportunidades para que prosperem na TI, promovendo representatividade e formando futuros líderes do setor.
 

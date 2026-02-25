@@ -29,17 +29,19 @@ theme:
     - search.share
     - toc.follow
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: cumbuca
+    - scheme: cumbuca-light
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Dark mode
 
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: cumbuca-dark
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Light mode
 
 #######
 # Docs settings
@@ -86,4 +88,5 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
-  - assets/css/cumbuca.css
+  - assets/css/cumbuca-light.css
+  - assets/css/cumbuca-dark.css
