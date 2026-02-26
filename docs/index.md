@@ -1,29 +1,119 @@
-![Logo da Cumbuca Dev](https://github.com/cumbucadev/brand/raw/main/images/github-hero-dark.png)
+# Boas-vindas à Cumbuca Docs
 
-A **Cumbuca Dev** é uma organização dedicada a promover diversidade e inclusão no setor de tecnologia por meio de educação e código aberto. Nosso objetivo é empoderar grupos minoritários, oferecendo oportunidades para que prosperem na TI, promovendo representatividade e formando futuros líderes do setor.
+Como a Cumbuca é uma comunidade totalmente remota, adotamos uma abordagem orientada à documentação.
+A Cumbuca Docs reúne as informações necessárias para compreender como a comunidade funciona, se
+organiza e toma decisões.
 
-## Nossos Pilares
+Essa abordagem foi inspirada no modelo do [GitLab Handbook](https://handbook.gitlab.com/), que
+valoriza a clareza, a transparência e o registro compartilhado de informações.
 
-- **Educação:** Acreditamos que o acesso ao conhecimento transforma vidas e promove igualdade no mercado de tecnologia.
-- **Tecnologia:** Tornamos o conhecimento e as oportunidades acessíveis, criando um ambiente inclusivo e inovador.
-- **Grupos Minoritários:** Nosso foco é capacitar grupos minoritários, fornecendo recursos e oportunidades para que se destaquem na TI.
-- **Código Aberto:** Transparência, colaboração e acessibilidade são essenciais. Compartilhamos conhecimento para fortalecer a comunidade e impulsionar a inovação.
+<script>
+// Marks the home page so the sidebar can be hidden only on it
+;(function(){
+  try{
+    var p = location.pathname.replace(/index.html$/, '');
+    if(p === '/' || p === '' ){
+      document.documentElement.classList.add('no-sidebar');
+    }
+  }catch(e){/* silent */}
+})();
+</script>
 
-## Organizações
+<div class="cards-grid">
+  <div class="card">
+    <div class="icon">🥥</div>
+    <h3>A Cumbuca</h3>
+    <div class="links">
+      <a href="/">Página Inicial</a>
+    </div>
+  </div>
 
-Além da própria Cumbuca Dev, estão sob seu guarda-chuva as seguintes organizações:
+  <div class="card">
+    <div class="icon">🎥</div>
+    <h3>Audiovisual</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-audiovisual/">Guia do Núcleo</a>
+    </div>
+  </div>
 
-- **[ScanAPI](https://github.com/scanapi)** <img src="https://github.com/scanapi/brand/raw/main/svg/icon-dark.svg" width="20" height="20" style="vertical-align: text-bottom;" alt="Logo do ScanAPI">
+  <div class="card">
+    <div class="icon">🔊</div>
+    <h3>Comunicação</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-comunicacao/">Guia do Núcleo</a>
+    </div>
+  </div>
 
-  - Ferramentas para automação de testes de integração e documentação de APIs.
+  <div class="card">
+    <div class="icon">📚</div>
+    <h3>Curadoria</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-curadoria/">Guia do Núcleo</a>
+    </div>
+  </div>
 
-- **[Brazilian Utils](https://github.com/brazilian-utils)** <img src="https://github.com/brazilian-utils/brand/raw/main/icons/icon.svg" width="20" height="20" style="vertical-align: text-bottom;" alt="Logo do Brazilian Utils">
-  - Bibliotecas de utilitários para validar, gerar e manipular dados conforme padrões e particularidades brasileiras.
+  <div class="card">
+    <div class="icon">📊</div>
+    <h3>Dados e Análises</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-dados-e-analises/">Guia do Núcleo</a>
+    </div>
+  </div>
 
----
+  <div class="card">
+    <div class="icon">📝</div>
+    <h3>Documentação</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-documentacao/">Guia do Núcleo</a>
+    </div>
+  </div>
 
-<div align="center">
+  <div class="card">
+    <div class="icon">🎉</div>
+    <h3>Eventos</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-eventos/">Guia do Núcleo</a>
+    </div>
+  </div>
 
-Para qualquer contato, dúvida ou sugestão, escreva para: **<cumbucadev@gmail.com>**
+  <div class="card">
+    <div class="icon">💰</div>
+    <h3>Financeiro</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-financeiro/">Guia do Núcleo</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛠️</div>
+    <h3>Infraestrutura</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-infra/">Guia do Núcleo</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔓</div>
+    <h3>Open Source</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-open-source/">Guia do Núcleo</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">👥</div>
+    <h3>Pessoas e Vagas</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-pessoas-e-vagas/">Guia do Núcleo</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎯</div>
+    <h3>Possibilidades</h3>
+    <div class="links">
+      <a href="/nucleos/nucleo-possibilidades/">Guia do Núcleo</a>
+    </div>
+  </div>
 
 </div>

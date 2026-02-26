@@ -88,5 +88,5 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
-  - assets/css/cumbuca-light.css
-  - assets/css/cumbuca-dark.css
+  - assets/css/theme.css
+  - assets/css/cards.css
