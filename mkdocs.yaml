@@ -90,3 +90,7 @@ markdown_extensions:
 extra_css:
   - assets/css/theme.css
   - assets/css/cards.css
+
+# custom scripts loaded on every page
+extra_javascript:
+  - assets/js/sidebar.js

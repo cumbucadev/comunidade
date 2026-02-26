@@ -7,18 +7,6 @@ organiza e toma decisões.
 Essa abordagem foi inspirada no modelo do [GitLab Handbook](https://handbook.gitlab.com/), que
 valoriza a clareza, a transparência e o registro compartilhado de informações.
 
-<script>
-// Marks the home page so the sidebar can be hidden only on it
-;(function(){
-  try{
-    var p = location.pathname.replace(/index.html$/, '');
-    if(p === '/' || p === '' ){
-      document.documentElement.classList.add('no-sidebar');
-    }
-  }catch(e){/* silent */}
-})();
-</script>
-
 <div class="cards-grid">
   <div class="card">
     <div class="icon">🥥</div>
