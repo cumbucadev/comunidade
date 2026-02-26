@@ -1,0 +1,126 @@
+name: Deploy Preview Documentation
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'docs-temp/**'
+      - 'mkdocs.yaml'
+      - '.github/workflows/deploy-preview-documentation.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Generate cache ID
+        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v5
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: ~/.cache
+          restore-keys: |
+            mkdocs-material-
+
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
+
+      - name: Build documentation
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages (PR Preview)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          destination_dir: preview/pr/${{ github.event.pull_request.number }}
+
+      - name: Comment on PR with preview link
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue = context.issue;
+            const prNumber = issue.number;
+            const comment = `## 📖 Pré-visualização da Documentação
+
+            ✅ A documentação foi compilada com sucesso!
+
+            ### 🔗 Acessar a pré-visualização:
+            **[Visualizar documentação →](https://docs.cumbuca.dev/preview/pr/${prNumber}/)**
+
+            Esta pré-visualização estará disponível enquanto o PR estiver aberto.
+
+            ---
+
+            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*
+            `;
+
+            github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: owner,
+              repo: repo,
+              body: comment
+            });
+
+      - name: Find and update existing comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue = context.issue;
+            const prNumber = issue.number;
+
+            const previewUrl = `https://docs.cumbuca.dev/preview/pr/${prNumber}/`;
+
+            const comments = await github.rest.issues.listComments({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber
+            });
+
+            for (const comment of comments.data) {
+              if (comment.user.type === 'Bot' && comment.body.includes('Pré-visualização da Documentação')) {
+                const newBody = `## 📖 Pré-visualização da Documentação
+
+            ✅ A documentação foi compilada com sucesso!
+
+            ### 🔗 Acessar a pré-visualização:
+            **[Visualizar documentação →](${previewUrl})**
+
+            Esta pré-visualização estará disponível enquanto o PR estiver aberto.
+
+            ---
+
+            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*
+            `;
+
+                await github.rest.issues.updateComment({
+                  owner: owner,
+                  repo: repo,
+                  comment_id: comment.id,
+                  body: newBody
+                });
+                return;
+              }
+            }
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-preview-pr-${{ github.event.pull_request.number }}
+          path: site/
+          retention-days: 7
