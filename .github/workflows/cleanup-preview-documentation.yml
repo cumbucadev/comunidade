@@ -1,0 +1,42 @@
+name: Cleanup Preview Documentation
+
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove PR preview directory
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PR_DIR="preview/pr/${PR_NUMBER}"
+
+          if [ -d "$PR_DIR" ]; then
+            echo "Deletando pré-visualização do PR #${PR_NUMBER}..."
+
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+            # Remover diretório do índice
+            git rm -r --cached "$PR_DIR" 2>/dev/null || true
+
+            # Remover arquivos do disco
+            rm -rf "$PR_DIR"
+
+            # Push direto sem commit, apenas apagando a pasta
+            git push --force-with-lease origin gh-pages
+          else
+            echo "Diretório $PR_DIR não encontrado"
+          fi
