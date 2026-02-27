@@ -2,7 +2,7 @@
 
 Antes de tudo, obrigada pelo interesse em contribuir com a [cumbuca.dev](https://cumbuca.dev)!
 
-Antes de começar, é importante ler o nosso [Código de Conduta](./../codigo-de-conduta.md) para entender as diretrizes de comportamento e colaboração dentro da comunidade.
+Antes de começar, é importante ler o nosso [Código de Conduta](./codigo-de-conduta.md) para entender as diretrizes de comportamento e colaboração dentro da comunidade.
 
 Vamos focar em como você pode ajudar a melhorar a documentação da [cumbuca.dev](https://cumbuca.dev), mas sinta-se à vontade para explorar outras formas  e projetos de contribuir!
 

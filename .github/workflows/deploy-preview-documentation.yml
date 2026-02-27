@@ -4,7 +4,6 @@ on:
   pull_request:
     paths:
       - 'docs/**'
-      - 'docs-temp/**'
       - 'mkdocs.yaml'
       - '.github/workflows/deploy-preview-documentation.yml'
 
