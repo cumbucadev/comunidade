@@ -18,15 +18,15 @@ theme:
   favicon: assets/img/logo-transparent.png
   language: pt-BR
   features:
+    - navigation.footer
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
     - navigation.path
     - navigation.top
-    - search.suggest
+    - navigation.sections
     - search.share
+    - search.suggest
     - toc.follow
   palette:
     - scheme: cumbuca-light
@@ -47,14 +47,13 @@ theme:
 # Docs settings
 #######
 nav:
-  - Página inicial:
-      - Boas-vindas!: index.md
-  - Código de Conduta: codigo-de-conduta.md
-  - Como contribuir:
-      - contribuindo/index.md
-      - Templates:
-          - Ata de Reunião: contribuindo/templates/template-ata-reuniao.md
-          - Guia do Núcleo: contribuindo/templates/template-nucleo.md
+  - Cumbuca Docs:
+    - intro/index.md
+    - Como contribuir: contribuindo/index.md
+    - Código de Conduta: contribuindo/codigo-de-conduta.md
+    - Templates:
+      - Ata de Reunião: contribuindo/templates/template-ata-reuniao.md
+      - Guia do Núcleo: contribuindo/templates/template-nucleo.md
 
 #######
 # Development settings
@@ -94,3 +93,16 @@ extra_css:
 # custom scripts loaded on every page
 extra_javascript:
   - assets/js/sidebar.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cumbucadev/
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/cumbucadev/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@cumbucadev
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/cumbucadev/
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contato@cumbuca.dev

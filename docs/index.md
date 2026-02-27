@@ -1,11 +1,27 @@
-# Boas-vindas à Cumbuca Docs
+# **Boas-vindas à Cumbuca Docs**
 
 Como a Cumbuca é uma comunidade totalmente remota, adotamos uma abordagem orientada à documentação.
 A Cumbuca Docs reúne as informações necessárias para compreender como a comunidade funciona, se
 organiza e toma decisões.
 
-Essa abordagem foi inspirada no modelo do [GitLab Handbook](https://handbook.gitlab.com/), que
-valoriza a clareza, a transparência e o registro compartilhado de informações.
+## Comece por aqui
+
+Acesse a documentação completa da Cumbuca.
+Lá você encontrará os guias, políticas, templates e orientações que organizam o funcionamento da comunidade.
+
+<div class="card card-primary">
+  <div class="icon">📘</div>
+  <h3>Explorar a documentação</h3>
+  <p>Entre na área principal da Cumbuca Docs e navegue pelos conteúdos organizados por tema.</p>
+  <div class="links">
+    <a href="/intro/">Acessar documentação</a>
+  </div>
+</div>
+
+## Links de acesso rápido
+
+Abaixo estão atalhos para áreas e núcleos da comunidade.
+Use estes links quando já souber para onde deseja ir ou quiser acessar diretamente o guia de um núcleo específico.
 
 <div class="cards-grid">
   <div class="card">
@@ -103,5 +119,20 @@ valoriza a clareza, a transparência e o registro compartilhado de informações
       <a href="/nucleos/nucleo-possibilidades/">Guia do Núcleo</a>
     </div>
   </div>
+</div>
 
+## Sobre esta abordagem
+
+A organização da Cumbuca Docs foi inspirada no modelo do
+[GitLab Handbook](https://handbook.gitlab.com/), que valoriza a clareza, a transparência e o
+registro compartilhado de informações. Assim como no handbook do GitLab, a documentação é parte
+central da cultura da comunidade e funciona como referência viva para decisões, processos e
+responsabilidades.
+
+---
+
+<div class="cta-center">
+  <div class="links">
+    <a href="/intro/">Acessar documentação 📘</a>
+  </div>
 </div>
