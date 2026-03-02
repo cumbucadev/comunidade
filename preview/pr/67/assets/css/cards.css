@@ -1,0 +1,105 @@
+/*
+ * Cards layout for núcleos home
+ * Variables and responsiveness organised for readability.
+ */
+
+:root {
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(0,0,0,0.08);
+  --card-padding: 22px;
+  --card-radius: 8px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+
+.card {
+  background: var(--md-default-bg, var(--card-bg));
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  min-height: 120px;
+  padding: var(--card-padding);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+.card .icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.card .links {
+  margin-top: auto;
+}
+
+.card a {
+  color: var(--md-typeset-a-color, var(--md-primary-fg-color, #8B008B));
+  display: inline-block;
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+
+.card a:hover {
+  color: var(--md-primary-fg-color--light, var(--md-accent-fg-color--transparent, #B84FB8));
+}
+
+/* larger spacing on wide screens */
+@media (min-width: 1000px) {
+  .cards-grid {
+    gap: 28px;
+  }
+  .card {
+    padding: 28px;
+  }
+}
+
+/* theme-specific adjustments */
+[data-md-color-scheme="cumbuca-dark"] .card {
+  border-color: rgba(255,255,255,0.10);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02);
+}
+
+[data-md-color-scheme="cumbuca-light"] .card {
+  border-color: rgba(0,0,0,0.10);
+}
+
+/* sidebar toggling helpers (script adds .no-sidebar) */
+.no-sidebar .md-sidebar,
+.no-sidebar .md-nav,
+.no-sidebar .md-sidebar--primary,
+.no-sidebar .md-sidebar--secondary,
+.no-sidebar .md-sidebar--toc {
+  display: none !important;
+}
+
+.no-sidebar main.md-main,
+.no-sidebar .md-main {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.no-sidebar .md-content {
+  max-width: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+
+.no-sidebar .md-main__inner,
+.no-sidebar .md-main {
+  grid-template-columns: 1fr !important;
+}
