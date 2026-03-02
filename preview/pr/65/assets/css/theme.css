@@ -1,0 +1,121 @@
+/*
+ * Theme variables and shared rules for both light and dark schemes.
+ */
+
+/* --------------------------------------------------
+   Shared layout and base rules
+   -------------------------------------------------- */
+
+.md-header,
+.md-header__title,
+.md-tabs__link,
+.md-header__button {
+  color: #FFFFFF !important; /* kept important to override theme defaults */
+}
+
+.md-tabs__link:hover,
+.md-header__button:hover {
+  color: var(--md-primary-fg-color--light) !important;
+}
+
+.md-typeset {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.md-header,
+.md-tabs {
+  background-color: var(--md-header-bg) !important;
+}
+
+/* --------------------------------------------------
+   Dark scheme
+   -------------------------------------------------- */
+
+[data-md-color-scheme="cumbuca-dark"] {
+  color-scheme: dark;
+  --md-header-bg: #1A1A1C;
+
+  /* Primary */
+  --md-primary-fg-color:               #8B008B;
+  --md-primary-fg-color--light:        #D48BD4;
+  --md-primary-fg-color--dark:         #F2DDF2;
+
+  /* Accent */
+  --md-accent-fg-color:                #D48BD4;
+  --md-accent-fg-color--transparent:   rgba(212, 139, 212, 0.18);
+
+  /* Background */
+  --md-default-bg-color:               #000000;
+  --md-default-bg-color--light:        #0F0F10;
+  --md-default-bg-color--lighter:      #1A1A1C;
+  --md-default-bg-color--lightest:     #222228;
+
+  /* Text */
+  --md-default-fg-color:               rgba(255, 255, 255, 0.92);
+  --md-default-fg-color--light:        rgba(255, 255, 255, 0.72);
+  --md-default-fg-color--lighter:      rgba(255, 255, 255, 0.50);
+
+  --md-typeset-color:                  rgba(255, 255, 255, 0.92);
+
+  /* Links */
+  --md-typeset-a-color:                #D48BD4;
+
+  /* Code */
+  --md-code-bg-color:                  #111114;
+  --md-code-fg-color:                  #F2DDF2;
+
+  /* UI surfaces */
+  --md-admonition-bg-color:            #0F0F10;
+
+  /* Footer */
+  --md-footer-bg-color:        #1A1A1C;
+}
+
+/* --------------------------------------------------
+   Light scheme
+   -------------------------------------------------- */
+
+[data-md-color-scheme="cumbuca-light"] {
+  color-scheme: light;
+  --md-header-bg: #000000;
+
+  /* Primary */
+  --md-primary-fg-color:               #8B008B;
+  --md-primary-fg-color--light:        #B84FB8;
+  --md-primary-fg-color--dark:         #5C005C;
+
+  /* Accent */
+  --md-accent-fg-color:                #8B008B;
+  --md-accent-fg-color--transparent:   rgba(139, 0, 139, 0.12);
+
+  /* Background */
+  --md-default-bg-color:               #FFFEFA;
+  --md-default-bg-color--light:        #FFFFFF;
+  --md-default-bg-color--lighter:      #FFFFFF;
+  --md-default-bg-color--lightest:     #FFFFFF;
+
+  /* Text */
+  --md-default-fg-color:               rgba(0, 0, 0, 0.87);
+  --md-default-fg-color--light:        rgba(0, 0, 0, 0.60);
+  --md-default-fg-color--lighter:      rgba(0, 0, 0, 0.38);
+
+  --md-typeset-color:                  rgba(0, 0, 0, 0.87);
+
+  /* Links */
+  --md-typeset-a-color:                #8B008B;
+
+  /* Code */
+  --md-code-bg-color:                  #F7F3F7;
+  --md-code-fg-color:                  #4A004A;
+
+  /* UI surfaces */
+  --md-admonition-bg-color:            #FFFFFF;
+
+  /* Footer */
+  --md-footer-bg-color:        #000000;
+}
+
+.md-nav__title {
+  display: none;
+}
