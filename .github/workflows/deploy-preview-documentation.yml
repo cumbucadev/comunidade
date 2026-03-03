@@ -48,7 +48,7 @@ jobs:
           destination_dir: preview/pr/${{ github.event.pull_request.number }}
 
       - name: Comment on PR with preview link
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { owner, repo } = context.repo;
@@ -76,7 +76,7 @@ jobs:
             });
 
       - name: Find and update existing comment
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const { owner, repo } = context.repo;
