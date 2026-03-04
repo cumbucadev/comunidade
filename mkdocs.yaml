@@ -19,7 +19,6 @@ theme:
   language: pt-BR
   features:
     - navigation.footer
-    - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
     - navigation.path
@@ -48,12 +47,13 @@ theme:
 #######
 nav:
   - Cumbuca Docs:
-    - intro/index.md
-    - Como contribuir: contribuindo/index.md
-    - Código de Conduta: contribuindo/codigo-de-conduta.md
-    - Templates:
-      - Ata de Reunião: contribuindo/templates/template-ata-reuniao.md
-      - Guia do Núcleo: contribuindo/templates/template-nucleo.md
+    - cumbuca-docs/intro.md
+    - Como contribuir:
+      - Sei programar: cumbuca-docs/contribuir/contribuir.md
+      - NÃO sei programar:
+        - cumbuca-docs/contribuir/editar-pagina.md
+        - cumbuca-docs/contribuir/adicionar-pagina.md
+        - cumbuca-docs/contribuir/remover-pagina.md
 
 #######
 # Development settings
@@ -74,15 +74,18 @@ plugins:
       lang: pt
 
 markdown_extensions:
-  - abbr # Abbreviations support
-  - attr_list # Attribute lists for elements
-  - def_list # Definition lists
-  - meta # Metadata support
-  - sane_lists # Better handling of lists
-  - smarty # Smart punctuation
-  - toc: # Table of contents settings
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - abbr
+  - attr_list
+  - def_list
+  - meta
+  - sane_lists
+  - smarty
+  - toc:
       toc_depth: 2-4
-  - pymdownx.emoji: # Emoji support
+  - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 

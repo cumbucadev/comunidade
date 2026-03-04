@@ -14,7 +14,7 @@ Lá você encontrará os guias, políticas, templates e orientações que organi
   <h3>Explorar a documentação</h3>
   <p>Entre na área principal da Cumbuca Docs e navegue pelos conteúdos organizados por tema.</p>
   <div class="links">
-    <a href="/intro/">Acessar documentação</a>
+    <a href="cumbuca-docs/intro/">Acessar documentação</a>
   </div>
 </div>
 
@@ -133,6 +133,6 @@ responsabilidades.
 
 <div class="cta-center">
   <div class="links">
-    <a href="/intro/">Acessar documentação 📘</a>
+    <a href="/cumbuca-docs/intro/">Acessar documentação 📘</a>
   </div>
 </div>
