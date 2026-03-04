@@ -1,4 +1,4 @@
-# Como editar uma página
+# Como editar uma página 
 
 !!! warning "Código de Conduta"
     Antes de começar, é importante ler o nosso
