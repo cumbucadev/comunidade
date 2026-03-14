@@ -75,15 +75,6 @@
   border-color: rgba(0,0,0,0.10);
 }
 
-/* sidebar toggling helpers (script adds .no-sidebar) */
-.no-sidebar .md-sidebar,
-.no-sidebar .md-nav,
-.no-sidebar .md-sidebar--primary,
-.no-sidebar .md-sidebar--secondary,
-.no-sidebar .md-sidebar--toc {
-  display: none !important;
-}
-
 .no-sidebar main.md-main,
 .no-sidebar .md-main {
   margin-left: 0 !important;
@@ -102,4 +93,16 @@
 .no-sidebar .md-main__inner,
 .no-sidebar .md-main {
   grid-template-columns: 1fr !important;
+}
+
+@media (min-width: 1220px) {
+  .no-sidebar .md-sidebar--primary {
+    display: none !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .no-sidebar .md-sidebar--secondary {
+    display: none !important;
+  }
 }
