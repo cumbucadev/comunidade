@@ -4,14 +4,12 @@ about: "Boas vindas, nova pessoa voluntária à Cumbuca Dev! \U0001F49C Esse che
   vai te guiar nos seus primeiros passos dentro da nossa comunidade."
 title: "<seu-nome-aqui> Entrando na Cumbuca \U0001F49C "
 labels: entrando-na-cumbuca
-assignees: ''
+assignees: antoniamaia
 type: Task
 
 ---
 
 # 💜 Entrando na Cumbuca 
-
-
 
 ## 🧭 Informações iniciais
 
@@ -22,19 +20,35 @@ type: Task
 
 ---
 
+### 🧩 1. Entender o básico
+
+* [ ] Criei minha conta no GitHub (se ainda não tinha)
+* [ ] Fiz o curso [**GitHub Essentials**](https://linuxtips.io/treinamento/github-essentials/)
+* [ ] Compartilhei meu certificado aqui (link ou print)
+
+
 ## ✅ Checklist de entrada
 
 * [ ] Escolhi um núcleo
 * [ ] Preenchi o [formulário de entrada](https://docs.google.com/forms/d/e/1FAIpQLSdm-rwQ5XZEBL4O304OGIIV6CS9dkW_AqND_OkxIcZ6l_MJfg/viewform?usp=header)
-* [ ] Fui adicionad@ ao repositório da comunidade
+* [ ] Me adicionaram ao repositório da comunidade
+* [ ] Aceitei o convite recebido por e-mail do GitHub
 * [ ] Entrei no Slack da Cumbuca Dev
 * [ ] Me apresentei no Slack, no canal do meu núcleo (#nucleo-<nome>)
 * [ ] Conversei com minha liderança
 * [ ] Entendi como o núcleo funciona (fluxo, canais e como contribuir)
+* [ ] Entrei no Project (quadro de tarefas) da Cumbuca Dev
 * [ ] Participei da primeira reunião remota do núcleo
-* [ ] Recebi minha primeira tarefa (clara e com escopo)
-* [ ] Iniciei minha primeira contribuição OU compartilhei detalhes do andamento da tarefa
+* [ ] Recebi minha primeira tarefa 
+* [ ] Comentei na issue dizendo que vou assumir
+* [ ] Iniciei minha contribuição OU compartilhei detalhes do andamento da tarefa
 
+### 🔁 Manter o fluxo
+
+* [ ] Dei update do andamento da tarefa (mesmo que não tenha finalizado)
+* [ ] Pedi ajuda se tive dúvidas aqui nos comentários da Issue
+
+👉 Comunicação faz parte do processo
 ---
 
 ## 🎯 Objetivos (opcional, mas recomendado)
@@ -47,12 +61,6 @@ O que você gostaria de desenvolver na Cumbuca?
 * [ ] Fazer networking
 * [ ] Me preparar para o mercado
 * [ ] Outro: ________
-
----
-
-## 💬 Observações
-
-Compartilhe aqui dúvidas, interesses ou expectativas:
 
 ---
 
@@ -79,4 +87,4 @@ Compartilhe aqui dúvidas, interesses ou expectativas:
 ---
 
 💜 Qualquer dúvida, pode chamar a gente.
-Boas vindas à Cumbuca Dev - construiremos em união uma TI diferenciada!
+A Cumbuca é construída em conjunto: bora construir um futuro incrível em TI com a gente!
