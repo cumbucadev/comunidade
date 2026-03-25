@@ -4,7 +4,7 @@ about: "Boas vindas, nova pessoa voluntária à Cumbuca Dev! \U0001F49C Esse che
   vai te guiar nos seus primeiros passos dentro da nossa comunidade."
 title: "<seu-nome-aqui> Entrando na Cumbuca \U0001F49C "
 labels: entrando-na-cumbuca
-assignees: antoniamaia
+assignees: ''
 type: Task
 
 ---
