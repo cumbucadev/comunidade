@@ -3,9 +3,9 @@ name: Deploy Preview Documentation
 on:
   pull_request:
     paths:
-      - 'docs/**'
-      - 'mkdocs.yaml'
-      - '.github/workflows/deploy-preview-documentation.yml'
+      - "docs/**"
+      - "mkdocs.yaml"
+      - ".github/workflows/deploy-preview-documentation.yml"
 
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
       - name: Generate cache ID
         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV

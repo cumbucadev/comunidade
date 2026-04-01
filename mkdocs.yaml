@@ -47,14 +47,14 @@ theme:
 #######
 nav:
   - Cumbuca Docs:
-    - cumbuca-docs/intro.md
-    - Como contribuir:
-      - Sei programar: cumbuca-docs/contribuir/contribuir.md
-      - NÃO sei programar:
-        - cumbuca-docs/contribuir/editar-pagina.md
-        - cumbuca-docs/contribuir/adicionar-pagina.md
-        - cumbuca-docs/contribuir/remover-pagina.md
-        - cumbuca-docs/contribuir/nova-pagina.md
+      - cumbuca-docs/intro.md
+      - Como contribuir:
+          - Sei programar: cumbuca-docs/contribuir/contribuir.md
+          - NÃO sei programar:
+              - cumbuca-docs/contribuir/editar-pagina.md
+              - cumbuca-docs/contribuir/adicionar-pagina.md
+              - cumbuca-docs/contribuir/remover-pagina.md
+              - cumbuca-docs/contribuir/nova-pagina.md
 
 #######
 # Development settings
