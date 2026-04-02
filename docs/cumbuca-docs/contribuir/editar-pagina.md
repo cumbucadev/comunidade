@@ -19,6 +19,7 @@ Para editar a documentação, você precisa apenas de:
 * Uma conta no GitHub
 * Estar logada na sua conta
 * Acessar o [repositório da comunidade](https://github.com/cumbucadev/comunidade)
+* Ter acesso de escrita no [repositório da comunidade](https://github.com/cumbucadev/comunidade)
 
 Todo o restante do processo acontece diretamente pelo navegador.
 
@@ -32,13 +33,7 @@ Clique nessa pasta para visualizar as páginas da documentação.
 
 Cada página corresponde a um arquivo com final `.md`. Esse é o formato usado para escrever documentação.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* a página inicial do repositório `cumbucadev/comunidade` no GitHub
-* a lista de arquivos do repositório
-* a pasta **docs** destacada
+![home comunidade](../../assets/img/cumbuca-docs/contribuir/home-comunidade.png)
 
 ## Passo 2: encontrar a página que você quer editar
 
@@ -46,20 +41,14 @@ Dentro da pasta **docs**, navegue pelas pastas até encontrar a página que dese
 exemplo:
 
 ```txt
-docs → contribuindo → codigo-de-conduta.md
+docs → cumbuca-docs → contribuir
 ```
 
 Clique no nome do arquivo para abrir o conteúdo da página.
 
 Nesse momento você estará vendo o arquivo em modo de leitura.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o caminho do arquivo no topo (ex: `comunidade / docs / contribuindo / codigo-de-conduta.md`)
-* o conteúdo do arquivo sendo exibido
-* a barra superior do GitHub com os botões de ação
+![arquivo modo leitura](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_arquivo-modo-leitura.png)
 
 ## Passo 3: abrir o modo de edição
 
@@ -69,12 +58,7 @@ Clique no lápis para começar a editar o arquivo.
 
 Depois disso o GitHub abrirá o **editor online**, onde você poderá alterar o texto da página.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o ícone de lápis no canto superior direito
-* o botão destacado para indicar onde clicar
+![botão de lápis para editar arquivo](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_editar-arquivo.png)
 
 ## Passo 4: editar o conteúdo da página
 
@@ -100,15 +84,11 @@ Mesmo sem conhecer Markdown profundamente, a maioria das edições é bastante i
 
 Caso você queira fazer algo que não está descrito neste guia, como adicionar **imagens**, pode consultar este guia de Markdown <https://www.markdownguide.org/basic-syntax/>.
 
+![modo edição arquivo](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_modo-edicao-arquivo.png)
+
 Se quiser ver como o texto ficará depois de publicado, use a aba **Preview** no topo do editor.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o editor do GitHub aberto
-* as abas **Edit** e **Preview**
-* o conteúdo da página sendo editado
+![modo preview arquivo](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_modo-preview-arquivo.png)
 
 ## Passo 5: salvar suas alterações
 
@@ -118,12 +98,7 @@ Diferente de outros editores, no GitHub o botão para salvar fica **no topo da p
 
 Clique em **Commit changes**.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o botão verde **Commit changes** no topo da página
-* o botão destacado
+![botão commit changes](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_commit-changes.png)
 
 ## Passo 6: descrever o que foi alterado
 
@@ -145,49 +120,57 @@ Depois de `docs:`, escreva uma frase curta explicando o que mudou.
 
 Esse texto ajuda outras pessoas a entenderem rapidamente a alteração feita.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* a janela de commit aberta
-* o campo de mensagem de commit sendo preenchido
-* um exemplo de commit começando com `docs:`
-* a opção de email de commit
+![mensagem de commit](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_mensagem-de-commit.png)
 
 ## Passo 7: confirmar o commit
 
-Nessa mesma janela existem duas opções.
+* Ao registrar o commit, selecione a opção: **Create a new branch for this commit and start a pull request**
+* Isso criará um **branch separado** para a nova página.
 
-A opção padrão do repositório é **Commit directly to the main branch**. Isso significa que a alteração será salva diretamente na versão principal da documentação.
+![commit em outro branch](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_commit-em-outro-branch.png)
 
-Normalmente essa opção pode ser mantida.
+* Depois clique em **Commit changes**.
 
-Depois disso, clique em **Commit changes** para confirmar.
+## Passo 8: abrir o Pull Request
 
-[INSERIR IMAGEM AQUI]
+* Depois do commit, o GitHub abrirá automaticamente a página para criar um **Pull Request**.
+* Um Pull Request é uma proposta de alteração no repositório.
 
-A imagem deve mostrar:
+![descrição do PR](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_descricao-pr.png)
 
-* a opção **Commit directly to the main branch** selecionada
-* o botão **Commit changes** na parte inferior da janela
+* Revise as mudanças e clique em **Create pull request**.
 
-## O que acontece depois
+![botão create pull request](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_create-pull-request.png)
 
-Depois que o commit é feito, a mudança passa a fazer parte da documentação no repositório.
+* Depois de clicar em Create pull request, o Pull Request será criado no repositório da comunidade.
 
-O site da Cumbuca Docs é atualizado automaticamente a partir desse repositório, então sua alteração aparecerá na documentação publicada após o processo de atualização.
+![PR criado](../../assets/img/cumbuca-docs/contribuir/editar-pagina_pull-request-criado.png)
 
-## Quando editar uma página
+## Passo 9: acompanhar o Pull Request
 
-Você pode editar a documentação sempre que encontrar algo que pode ser melhorado. Alguns exemplos comuns:
+Depois que o Pull Request é criado, alguém do núcleo responsável irá revisar a nova página.
 
-* Erros de digitação
-* Informações desatualizadas
-* Explicações confusas
-* Links quebrados
-* Mudanças em processos da comunidade
+Durante a revisão podem acontecer algumas situações:
 
-Pequenas melhorias ajudam muito a manter a documentação clara e atualizada.
+* a página é aprovada
+* são sugeridas melhorias
+* são solicitados pequenos ajustes
+
+* Se você descer a página do Pull Request, verá um comentário automático com um link para pré-visualizar as mudanças na documentação.
+
+![Pré-visualização](../../assets/img/cumbuca-docs/contribuir/editar-pagina_pre-visualizacao.png)
+
+_Caso esse comentário ainda não tenha aparecido ou o link retorne 404, aguarde alguns minutos e atualize a página. O deploy de preview pode levar um pequeno tempo para ser gerado._
+
+## Passo 10: integração do Pull Request
+
+Quando o Pull Request for aprovado - quando estiver tudo verde e o botão `Squash and merge` estiver
+habilitado, você deve mesclá-lo. Para isso, simplesmente clique no botão `Squash and merge`.
+
+![botão squash and merge](./../../assets/img/cumbuca-docs/contribuir/editar-pagina_squash-and-merge.png)
+
+Após a mesclagem, a nova página é integrada ao repositório principal. Em seguida, o site da
+Cumbuca Docs será atualizado automaticamente após essa integração.
 
 ## Dicas para contribuir com mais facilidade
 
