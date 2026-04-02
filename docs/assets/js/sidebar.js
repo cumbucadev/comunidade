@@ -8,7 +8,7 @@
   function updateSidebar() {
     try {
       var p = location.pathname.replace(/index\.html$/, '');
-      if (p === '/' || p === '') {
+      if (p === '/' || p === '' || /^\/preview\/pr\/\d+\/?$/.test(p)) {
         document.documentElement.classList.add('no-sidebar');
       } else {
         document.documentElement.classList.remove('no-sidebar');
