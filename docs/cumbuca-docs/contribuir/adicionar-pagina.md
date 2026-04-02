@@ -15,6 +15,13 @@ Criar uma nova página significa adicionar um novo arquivo de documentação den
 
 ## Antes de começar
 
+Para editar a documentação, você precisa de:
+
+* Uma conta no GitHub
+* Estar logada na sua conta
+* Acessar o [repositório da comunidade](https://github.com/cumbucadev/comunidade)
+* Ter acesso de escrita no [repositório da comunidade](https://github.com/cumbucadev/comunidade)
+
 Antes de criar uma nova página, verifique se:
 
 * A informação realmente precisa de uma nova página
@@ -27,13 +34,7 @@ Antes de criar uma nova página, verifique se:
 * Dentro dele estão vários arquivos e pastas. Toda a documentação fica dentro da pasta **docs**.
 * Clique na pasta **docs** para visualizar as páginas da documentação.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* a página inicial do repositório `cumbucadev/comunidade`
-* a lista de arquivos
-* a pasta **docs** destacada
+![home comunidade](../../assets/img/cumbuca-docs/contribuir/home-comunidade.png)
 
 ## Passo 2: navegar até a seção correta
 
@@ -41,20 +42,14 @@ Dentro da pasta `docs`, navegue pelas pastas até encontrar o local onde a nova 
 
 Por exemplo:
 
-```sh
-docs → nucleos → nucleo-comunicacao guias/nova-pagina.md→ guias
+```txt
+docs → cumbuca-docs → contribuir
 ```
 
 Cada pasta representa uma seção da documentação. Escolha a pasta que melhor representa o tema da
 nova página.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* a navegação dentro da pasta `docs`
-* algumas subpastas da documentação
-* a pasta onde a nova página será criada
+![pasta contribuir no branch main](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pasta-main.png)
 
 ## Passo 3: criar um novo arquivo
 
@@ -64,12 +59,7 @@ A imagem deve mostrar:
 
 Isso abrirá o editor para criar um novo arquivo.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o botão **Add file**
-* a opção **Create new file**
+![create new file](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_create-new-file.png)
 
 ## Passo 4: definir o nome do arquivo
 
@@ -93,12 +83,7 @@ Algumas boas práticas para nomes de arquivos:
 * escolher nomes curtos e descritivos
 * evitar acentos e caracteres especiais
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o campo de nome do arquivo
-* o nome terminando em `.md`
+![nome do arquivo](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nome-do-arquivo.png)
 
 ## Passo 5: escrever o conteúdo da página
 
@@ -129,17 +114,13 @@ Algumas convenções comuns:
 * Parágrafos são separados por uma linha em branco
 * Links usam o formato `[texto](link)`
 
-Se quiser visualizar como o conteúdo ficará, use a aba **Preview** no topo do editor.
-
 Caso você queira fazer algo que não está descrito neste guia, como adicionar **imagens**, pode consultar este guia de Markdown <https://www.markdownguide.org/basic-syntax/>.
 
-[INSERIR IMAGEM AQUI]
+![edição nova página](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_edicao.png)
 
-A imagem deve mostrar:
+Se quiser visualizar como o conteúdo ficará, use a aba **Preview** no topo do editor.
 
-* o editor do GitHub
-* o conteúdo sendo escrito
-* as abas **Edit** e **Preview**
+![preview da nova página](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_modo-preview.png)
 
 ## Passo 6: salvar a nova página
 
@@ -147,12 +128,7 @@ Depois de terminar o conteúdo da página, clique no botão **Commit changes**, 
 
 Isso abrirá a janela para registrar a alteração.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* o botão **Commit changes**
-* o botão destacado
+![botão commit changes](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_commit-changes.png)
 
 ## Passo 7: escrever a mensagem do commit
 
@@ -170,38 +146,48 @@ docs: cria documentação sobre processos internos
 
 Depois de `docs:`, escreva uma frase curta explicando o que foi criado.
 
-[INSERIR IMAGEM AQUI]
-
-A imagem deve mostrar:
-
-* a janela de commit aberta
-* o campo de mensagem preenchido com `docs:`
+![mensagem de commit](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_mensagem-de-commit.png)
 
 ## Passo 8: criar um branch para a alteração
 
 * Ao registrar o commit, selecione a opção: **Create a new branch for this commit and start a pull request**
 * Isso criará um **branch separado** para a nova página.
-* Depois clique em **Commit changes**.
 
-[INSERIR IMAGEM AQUI]
+![commit em um novo branch](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_commit-new-branch.png)
 
-A imagem deve mostrar:
+* Depois clique em **Propose changes**.
 
-* a opção **Create a new branch for this commit**
-* o botão **Commit changes**
+![botão Propose changes](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_propose-changes.png)
 
 ## Passo 9: abrir o Pull Request
 
 * Depois do commit, o GitHub abrirá automaticamente a página para criar um **Pull Request**.
 * Um Pull Request é uma proposta de alteração no repositório.
+* Na descrição do Pull Request, adicione `Closes #<numero-da-issue>` para indicar qual issue está sendo resolvida.
+
+Exemplo:
+
+```md
+closes #42
+```
+
+![descrição PR](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_descricao-pr.png)
+
+Isso faz com que a issue seja **fechada automaticamente** quando o Pull Request for aprovado e integrado ao repositório.
+
 * Revise as mudanças e clique em **Create pull request**.
 
-[INSERIR IMAGEM AQUI]
+![botão Create Pull Request](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_create-pull-request.png)
 
-A imagem deve mostrar:
+* Depois de clicar em Create pull request, o Pull Request será criado no repositório da comunidade.
 
-* a tela de criação de Pull Request
-* o botão **Create pull request**
+![PR criado](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pr-criado.png)
+
+* Se você descer a página do Pull Request, verá um comentário automático com um link para pré-visualizar as mudanças na documentação.
+
+![Pré-visualização](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pre-visualizacao.png)
+
+_Caso esse comentário ainda não tenha aparecido ou o link retorne 404, aguarde alguns minutos e atualize a página. O deploy de preview pode levar um pequeno tempo para ser gerado._
 
 ## Passo 10: adicionar a página ao menu da documentação
 
@@ -209,20 +195,38 @@ Para que a nova página apareça no menu da Cumbuca Docs, é necessário adicion
 
 Esse arquivo define a estrutura de navegação da documentação.
 
-### 1. Abrir o arquivo mkdocs.yml
+### 1. Trocar para o branch do Pull Request
 
-No repositório, procure o arquivo **mkdocs.yml** na raiz do projeto e clique nele para abrir.
+Antes de editar qualquer arquivo, verifique se você está no **branch correto**.
 
-Depois clique no **ícone de lápis** para editar o arquivo.
+No topo da página do repositório existe um **seletor de branch**.
 
-[INSERIR IMAGEM AQUI]
+* Clique no seletor de branch
+* Escolha o **branch criado pelo seu Pull Request**
 
-A imagem deve mostrar:
+Isso garante que a alteração será adicionada ao mesmo PR.
 
-* o arquivo `mkdocs.yml` na raiz do repositório
-* o ícone de lápis para editar
+![Seleção de branch](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-selecionar-branch.png)
 
-### 2. Encontrar a seção `nav`
+### 2. Abrir o arquivo mkdocs.yml
+
+Depois de selecionar o branch correto:
+
+* Procure o arquivo **mkdocs.yml** na raiz do repositório
+
+![arquivo mkdocs](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mkdocs.png)
+
+* Clique no arquivo para abrir
+
+![arquivo mkdocs aberto em modo leitura](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mkdocs-leitura.png)
+
+* Clique no **ícone de lápis** para editar
+
+![botão de edição no arquivo mkdocs](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mkdocs-editar.png)
+
+![modo edição no arquivo mkdocs](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mkdocs-edicao-1.png)
+
+### 3. Encontrar a seção `nav`
 
 Dentro do arquivo, procure a seção chamada `nav`.
 Ela define quais páginas aparecem no menu da documentação.
@@ -233,15 +237,17 @@ Exemplo simplificado:
 nav:
   - Cumbuca Docs:
     - cumbuca-docs/intro.md
-    - cumbuca-docs/contribuir.md
-    ...
-  - Nucleos:
-    - nucleo-comunicacao:
-      - guias:
-        - guia-exemplo.md
+    - Como contribuir:
+      - Sei programar: cumbuca-docs/contribuir/contribuir.md
+      - NÃO sei programar:
+        - cumbuca-docs/contribuir/editar-pagina.md
+        - cumbuca-docs/contribuir/adicionar-pagina.md
+        - cumbuca-docs/contribuir/remover-pagina.md
 ```
 
-### 3. Adicionar a nova página
+![modo edição no arquivo mkdocs, elemento nav](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mkdocs-edicao-2.png)
+
+### 4. Adicionar a nova página
 
 Adicione uma nova linha apontando para o arquivo que você criou.
 
@@ -251,23 +257,28 @@ Exemplo:
 nav:
   - Cumbuca Docs:
     - cumbuca-docs/intro.md
-    - cumbuca-docs/contribuir.md
-    ...
-  - Nucleos:
-    - nucleo-comunicacao:
-      - guias:
-        - guia-exemplo.md
-        - nova-pagina.md
+    - Como contribuir:
+      - Sei programar: cumbuca-docs/contribuir/contribuir.md
+      - NÃO sei programar:
+        - cumbuca-docs/contribuir/editar-pagina.md
+        - cumbuca-docs/contribuir/adicionar-pagina.md
+        - cumbuca-docs/contribuir/remover-pagina.md
+        - cumbuca-docs/contribuir/nova-pagina.md
 ```
 
 O texto antes dos dois pontos (`:`) será o nome exibido no menu.
 O caminho depois dos dois pontos é o caminho do arquivo dentro da pasta `docs`.
 
-### 4. Salvar a alteração no mesmo Pull Request
+![modo edição no arquivo mkdocs, elemento nav modificado](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mkdocs-edicao-3.png)
 
-Depois de editar o `mkdocs.yml`:
+### 5. Salvar a alteração
+
+Depois de editar o arquivo:
 
 * Clique em **Commit changes**
+
+![botão commit changes](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-commit-changes.png)
+
 * Use uma mensagem de commit começando com `docs:`
 
 Exemplo:
@@ -276,32 +287,75 @@ Exemplo:
 docs: adiciona nova página ao menu da documentação
 ```
 
-Muito importante: **não crie um novo branch**.
+![mensagem do commit](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-mensagem-de-commit.png)
 
-Certifique-se de que o commit está sendo feito **no mesmo branch do Pull Request que você abriu anteriormente**.
+Como você já está no branch correto, o commit será automaticamente adicionado ao **mesmo Pull Request**. Você não precisa alterar nada.
 
-Assim, a alteração será adicionada automaticamente ao mesmo Pull Request.
+![opção selecionada de fazer o commit diretamente no branch 42](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-commit-branch.png)
 
-[INSERIR IMAGEM AQUI]
+* Depois clique em **Commit changes**.
 
-A imagem deve mostrar:
+![botão commit changes](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_nav-commit-changes-2.png)
 
-* a tela de commit
-* o branch do Pull Request selecionado
-* o botão **Commit changes**
+## Passo 11: acompanhar o Pull Request
 
-## O que acontece depois
+Depois de adicionar a página ao menu e salvar o commit, o Pull Request continuará aberto até que seja revisado.
 
-Depois que o Pull Request é criado, alguém do núcleo responsável irá revisar a nova página.
+Você pode acompanhar o status do Pull Request diretamente no GitHub.
 
-Durante a revisão podem acontecer algumas situações:
+### 1. Acessar a aba Pull requests
 
-* a página é aprovada
+No repositório da comunidade, clique na aba **Pull requests** no topo da página.
+
+![aba pull requests](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_aba-pull-requests.png)
+
+### 2. Encontrar o Pull Request criado
+
+Depois de abrir a aba **Pull requests**, você verá a lista de Pull Requests abertos no repositório.
+
+Procure pelo Pull Request que você criou.
+
+![lista de pull requests](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pr-lista.png)
+
+### 3. Abrir o Pull Request
+
+Clique no título do Pull Request para abrir a página com os detalhes da alteração.
+
+Nessa página você poderá ver:
+
+* a descrição do Pull Request
+* os commits realizados
+* os arquivos modificados
+
+![pagina do pull request](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pr-detalhes.png)
+
+### 4. Nova pré-visualização após atualizar o menu
+
+Depois que você adicionar a nova página ao menu da documentação (no arquivo `mkdocs.yml`) e fizer um novo commit, uma nova pré-visualização será gerada.
+
+Ao descer novamente a página do Pull Request, você verá **um novo comentário abaixo do primeiro**, com um link atualizado para visualizar a documentação.
+
+Esse novo link mostrará a documentação já com **a navegação (menu) atualizada**.
+
+![nova pre visualização](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pr-preview-atualizado.png)
+
+### 5. Aguardar a revisão
+
+Depois que o Pull Request estiver pronto, alguém da comunidade irá revisar a alteração.
+
+Durante esse processo podem acontecer algumas situações:
+
+* a alteração é aprovada
 * são sugeridas melhorias
-* são solicitados pequenos ajustes
+* são solicitados ajustes
 
-Quando o Pull Request é aprovado, a nova página é integrada ao repositório principal. O site da
-Cumbuca Docs será atualizado automaticamente após essa integração.
+## Passo 12: integração do Pull Request
+
+Quando todas as verificações estiverem corretas e a revisão for concluída, o Pull Request poderá ser integrado ao repositório.
+
+Isso acontece através do botão **Squash and merge**.
+
+![botao squash and merge](../../assets/img/cumbuca-docs/contribuir/adicionar-pagina_pr-squash-merge.png)
 
 ## Dicas para criar boas páginas
 
