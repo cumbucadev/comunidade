@@ -5,7 +5,7 @@
       srcset="https://github.com/cumbucadev/design/raw/main/images/logo-dark-transparent.png"
     >
     <img
-      alt="Logo do Cumbuca Dev"
+      alt="Cumbuca Dev Logo"
       src="https://github.com/cumbucadev/design/raw/main/images/logo-light-transparent.png"
       width="20%"
     >
@@ -16,39 +16,69 @@
 
 [Versão em Português](/README.md)
 
-## 💬 New Features and Reporting Bugs
+This repository exists to **centralize communication and operations for the Cumbuca open source community**.
 
-If you would like to suggest new features or report bugs, just create a new [issue][github-issues] and we will respond there!
+Here we organize initiatives, discussions, and processes that do not belong to a specific repository, but to the community as a whole.
 
-(To learn more about GitHub issues, check out the [official GitHub documentation][github-issues-doc]).
+## 🗂️ Community organization
 
-## 💡 Questions? Ideas?
+We use the [Operations Board](https://github.com/orgs/cumbucadev/projects/4) to track the community work.
 
-Do you have questions about how to use the library? New ideas for the project? Want to share something with us? Feel free to create a topic in our [Discussions][github-discussions], and we’ll interact with you there!
+In this board, you will find:
 
-(To learn more about GitHub discussions, check out the [official GitHub documentation][github-discussions-doc]).
+* Community-related tasks (not tied to a specific project)
+* Ongoing initiatives
+* Organizational and operational demands
 
-## 💻 Contributing to the Project's Code
+To better structure the work, we use **labels** to identify which core (núcleo) each issue belongs to.
 
-Your contribution is always very welcome! To help you get started, we’ve prepared the following files:
+## 💬 Communication and participation
 
-- [CONTRIBUTING.md](/CONTRIBUTING.md): Here you’ll find all the necessary instructions to contribute to the project.
-- [CONTRIBUTING_EN.md](/CONTRIBUTING_EN.md): English version of the contribution guidelines.
-- [CODE_OF_CONDUCT.md](/CODE_OF_CONDUCT.md): Our code of conduct, which defines expectations for respectful and inclusive interactions within the community.
-- [CODE_OF_CONDUCT_EN.md](/CODE_OF_CONDUCT_EN.md): English version of the code of conduct.
-- [CORE_TEAM.md](/CORE_TEAM.md): Lists and presents information about the members of the project’s core team, including their roles and contact details.
-- [CORE_TEAM_EN.md](CORE_TEAM_EN.md): English version of the list and information about the project’s core team.
-- [LICENSE.md](/LICENSE.md): Details about the project’s license. It defines what you can and cannot do with the code. In general, the license allows you to use, modify, and distribute the code as long as you follow the defined terms. However, it’s important to check for specific restrictions, such as credit attribution to the original author or prohibition of commercial use.
+We use GitHub as the main interaction channel for the community:
 
-Make sure to read these files carefully before contributing. If you have any difficulties or questions, feel free to ask us using [GitHub Discussions][github-discussions]. Every bit of help counts!
+* **Issues** → space to open tickets related to specific community cores
+* **Discussions** → space to talk with the community, ask questions, share ideas, and gather feedback
+
+If you already have something structured or actionable, open an [issue][github-issues].
+If you want to explore ideas, ask for help, or start a conversation, use [Discussions][github-discussions].
+
+(To learn more about GitHub Issues, check the [official GitHub documentation][github-issues-doc].)
+(To learn more about GitHub Discussions, check the [official GitHub documentation][github-discussions-doc].)
+
+## 📚 Cumbuca Docs
+
+This repository also contains the **internal documentation for the community**.
+
+It includes:
+
+* How to contribute
+* Guides and resources
+* Community processes and standards
+
+The source content of the documentation lives in the [`/docs`](/docs) folder, for those who want to explore or contribute directly.
+The published and navigable version is available at: https://docs.cumbuca.dev
+
+## 💻 Contributing to the project
+
+Your contribution is always welcome. To help you get started, we prepared the following files:
+
+* [CONTRIBUTING.md](/CONTRIBUTING.md): Contribution guidelines
+* [CONTRIBUTING_EN.md](/CONTRIBUTING_EN.md): English version
+* [CODE_OF_CONDUCT.md](/CODE_OF_CONDUCT.md): Community code of conduct
+* [CODE_OF_CONDUCT_EN.md](/CODE_OF_CONDUCT_EN.md): English version
+* [LICENSE.md](/LICENSE.md): Project license details
+
+Make sure to read these files before contributing. If you have any questions, use [GitHub Discussions][github-discussions]. Every contribution matters.
 
 ## ❤️ Contributors
 
-[![contributors](https://contrib.rocks/image?repo=cumbucadev/comunidade)](https://github.com/cumbucadev/comunidade/graphs/contributors)
+<a href="https://github.com/cumbucadev/comunidade/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cumbucadev/comunidade" />
+</a></br></br>
 
-_Made with [contrib.rocks](https://contrib.rocks)._
+*Made with [contrib.rocks](https://contrib.rocks).*
 
-[github-discussions-doc]: https://docs.github.com/discussions
+[github-discussions-doc]: https://docs.github.com/en/discussions
 [github-discussions]: https://github.com/cumbucadev/comunidade/discussions
-[github-issues-doc]: https://docs.github.com/issues/tracking-your-work-with-issues/creating-an-issue
+[github-issues-doc]: https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue
 [github-issues]: https://github.com/cumbucadev/comunidade/issues
