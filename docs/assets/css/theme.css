@@ -2,6 +2,81 @@
  * Theme variables and shared rules for both light and dark schemes.
  */
 
+ /* --------------------------------------------------
+   Open Dyslexic Font Definitions
+   -------------------------------------------------- */
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../fonts/OpenDyslexic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../fonts/OpenDyslexic-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../fonts/OpenDyslexic-Bold-Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --------------------------------------------------
+   Font Switching System
+   -------------------------------------------------- */
+
+[data-font-dyslexic="true"] {
+  --md-text-font: "OpenDyslexic", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --md-code-font: "OpenDyslexic", "SFMono-Regular", Consolas, "Roboto Mono", monospace;
+}
+
+[data-font-dyslexic="true"] .md-typeset,
+[data-font-dyslexic="true"] .md-header,
+[data-font-dyslexic="true"] .md-tabs,
+[data-font-dyslexic="true"] .md-nav,
+[data-font-dyslexic="true"] .md-footer,
+[data-font-dyslexic="true"] body {
+  font-family: var(--md-text-font) !important;
+  letter-spacing: -.05em !important;
+}
+
+[data-font-dyslexic="true"] .md-typeset code,
+[data-font-dyslexic="true"] .md-typeset pre,
+[data-font-dyslexic="true"] .md-typeset kbd {
+  font-family: var(--md-code-font) !important;
+  letter-spacing: -.05em !important;
+}
+
+[data-font-dyslexic="true"] .md-typeset h1,
+[data-font-dyslexic="true"] .md-typeset h2,
+[data-font-dyslexic="true"] .md-typeset h3,
+[data-font-dyslexic="true"] .md-typeset h4,
+[data-font-dyslexic="true"] .md-typeset h5,
+[data-font-dyslexic="true"] .md-typeset h6 {
+  letter-spacing: -.03em !important;
+}
+
+[data-font-dyslexic="true"] .md-source__fact::before {
+  vertical-align: initial !important;
+}
+
 /* --------------------------------------------------
    Shared layout and base rules
    -------------------------------------------------- */
