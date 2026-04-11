@@ -41,6 +41,7 @@ jobs:
         run: mkdocs build
 
       - name: Deploy to GitHub Pages (PR Preview)
+        if: github.event.pull_request.head.repo.full_name == github.repository
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -54,46 +55,31 @@ jobs:
             const { owner, repo } = context.repo;
             const issue = context.issue;
             const prNumber = issue.number;
-            const comment = `## 📖 Pré-visualização da Documentação
-
-            ✅ A documentação foi compilada com sucesso!
-
-            ### 🔗 Acessar a pré-visualização:
-            **[Visualizar documentação →](https://docs.cumbuca.dev/preview/pr/${prNumber}/)**
-
-            Esta pré-visualização estará disponível enquanto o PR estiver aberto.
-
-            ---
-
-            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*
-            `;
-
-            github.rest.issues.createComment({
-              issue_number: prNumber,
-              owner: owner,
-              repo: repo,
-              body: comment
-            });
-
-      - name: Find and update existing comment
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue = context.issue;
-            const prNumber = issue.number;
+            const isFork =
+              context.payload.pull_request.head.repo.full_name !== `${owner}/${repo}`;
+            const runId = context.runId;
 
             const previewUrl = `https://docs.cumbuca.dev/preview/pr/${prNumber}/`;
 
-            const comments = await github.rest.issues.listComments({
-              owner: owner,
-              repo: repo,
-              issue_number: prNumber
-            });
+            const body = isFork
+              ? `## 📖 Pré-visualização da Documentação
 
-            for (const comment of comments.data) {
-              if (comment.user.type === 'Bot' && comment.body.includes('Pré-visualização da Documentação')) {
-                const newBody = `## 📖 Pré-visualização da Documentação
+            ✅ A documentação foi compilada com sucesso!
+
+            ### 📦 Baixar pré-visualização:
+            Como este PR vem de um fork, o deploy automático não é possível por restrições de segurança do GitHub Actions.
+
+            **[⬇️ Acessar artifact da documentação](https://github.com/${owner}/${repo}/actions/runs/${runId})**
+
+            1. Acesse o link acima
+            2. Clique em **documentation-preview-pr-${prNumber}** na seção *Artifacts*
+            3. Extraia o arquivo baixado e abra \`index.html\` no navegador
+
+            ---
+
+            *O artifact ficará disponível por 7 dias.*`
+              : 
+              `## 📖 Pré-visualização da Documentação
 
             ✅ A documentação foi compilada com sucesso!
 
@@ -104,18 +90,32 @@ jobs:
 
             ---
 
-            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*
-            `;
+            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*`;
 
+            const comments = await github.rest.issues.listComments({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber
+            });
+
+            for (const comment of comments.data) {
+              if (comment.user.type === 'Bot' && comment.body.includes('Pré-visualização da Documentação')) {
                 await github.rest.issues.updateComment({
                   owner: owner,
                   repo: repo,
                   comment_id: comment.id,
-                  body: newBody
+                  body: body
                 });
                 return;
               }
             }
+
+            await github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: owner,
+              repo: repo,
+              body: body
+            });
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v7
