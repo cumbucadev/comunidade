@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   preview:
@@ -48,74 +47,14 @@ jobs:
           publish_dir: ./site
           destination_dir: preview/pr/${{ github.event.pull_request.number }}
 
-      - name: Comment on PR with preview link
-        uses: actions/github-script@v8
+      - name: Save PR metadata
+        run: echo "${{ github.event.pull_request.number }}" > pr_number.txt
+
+      - name: Upload PR metadata artifact
+        uses: actions/upload-artifact@v7
         with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue = context.issue;
-            const prNumber = issue.number;
-            const isFork =
-              context.payload.pull_request.head.repo.full_name !== `${owner}/${repo}`;
-            const runId = context.runId;
-
-            const previewUrl = `https://docs.cumbuca.dev/preview/pr/${prNumber}/`;
-
-            const body = isFork
-              ? `## 📖 Pré-visualização da Documentação
-
-            ✅ A documentação foi compilada com sucesso!
-
-            ### 📦 Baixar pré-visualização:
-            Como este PR vem de um fork, o deploy automático não é possível por restrições de segurança do GitHub Actions.
-
-            **[⬇️ Acessar artifact da documentação](https://github.com/${owner}/${repo}/actions/runs/${runId})**
-
-            1. Acesse o link acima
-            2. Clique em **documentation-preview-pr-${prNumber}** na seção *Artifacts*
-            3. Extraia o arquivo baixado e abra \`index.html\` no navegador
-
-            ---
-
-            *O artifact ficará disponível por 7 dias.*`
-              : 
-              `## 📖 Pré-visualização da Documentação
-
-            ✅ A documentação foi compilada com sucesso!
-
-            ### 🔗 Acessar a pré-visualização:
-            **[Visualizar documentação →](${previewUrl})**
-
-            Esta pré-visualização estará disponível enquanto o PR estiver aberto.
-
-            ---
-
-            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*`;
-
-            const comments = await github.rest.issues.listComments({
-              owner: owner,
-              repo: repo,
-              issue_number: prNumber
-            });
-
-            for (const comment of comments.data) {
-              if (comment.user.type === 'Bot' && comment.body.includes('Pré-visualização da Documentação')) {
-                await github.rest.issues.updateComment({
-                  owner: owner,
-                  repo: repo,
-                  comment_id: comment.id,
-                  body: body
-                });
-                return;
-              }
-            }
-
-            await github.rest.issues.createComment({
-              issue_number: prNumber,
-              owner: owner,
-              repo: repo,
-              body: body
-            });
+          name: pr-metadata
+          path: pr_number.txt
 
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v7

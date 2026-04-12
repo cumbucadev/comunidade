@@ -1,0 +1,88 @@
+name: Comment Preview Documentation
+
+on:
+  workflow_run:
+    workflows: ["Deploy Preview Documentation"]
+    types:
+      - completed
+
+permissions:
+  pull-requests: write
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download PR metadata artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-metadata
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment on PR with preview link
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const prNumber = parseInt(require('fs').readFileSync('pr_number.txt', 'utf8').trim());
+            const isFork =
+              context.payload.workflow_run.head_repository.full_name !== `${owner}/${repo}`;
+            const runId = context.payload.workflow_run.id;
+
+            const previewUrl = `https://docs.cumbuca.dev/preview/pr/${prNumber}/`;
+
+            const body = isFork
+              ? `## 📖 Pré-visualização da Documentação
+
+            ✅ A documentação foi compilada com sucesso!
+
+            ### 📦 Baixar pré-visualização:
+            Como este PR vem de um fork, o deploy automático não é possível por restrições de segurança do GitHub Actions.
+
+            **[⬇️ Acessar artifact da documentação](https://github.com/${owner}/${repo}/actions/runs/${runId})**
+
+            1. Acesse o link acima
+            2. Clique em **documentation-preview-pr-${prNumber}** na seção *Artifacts*
+            3. Extraia o arquivo baixado e abra \`index.html\` no navegador
+
+            ---
+
+            *O artifact ficará disponível por 7 dias.*`
+              : `## 📖 Pré-visualização da Documentação
+
+            ✅ A documentação foi compilada com sucesso!
+
+            ### 🔗 Acessar a pré-visualização:
+            **[Visualizar documentação →](${previewUrl})**
+
+            Esta pré-visualização estará disponível enquanto o PR estiver aberto.
+
+            ---
+
+            *Ao fazer merge do PR, a pré-visualização será automaticamente removida.*`;
+
+            const comments = await github.rest.issues.listComments({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber
+            });
+
+            for (const comment of comments.data) {
+              if (comment.user.type === 'Bot' && comment.body.includes('Pré-visualização da Documentação')) {
+                await github.rest.issues.updateComment({
+                  owner: owner,
+                  repo: repo,
+                  comment_id: comment.id,
+                  body: body
+                });
+                return;
+              }
+            }
+
+            await github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: owner,
+              repo: repo,
+              body: body
+            });
