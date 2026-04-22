@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://docs.cumbuca.dev/</loc>
+         <lastmod>2026-04-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cumbuca.dev/cumbuca-docs/intro/</loc>
+         <lastmod>2026-04-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cumbuca.dev/cumbuca-docs/contribuir/adicionar-pagina/</loc>
+         <lastmod>2026-04-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cumbuca.dev/cumbuca-docs/contribuir/contribuir/</loc>
+         <lastmod>2026-04-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cumbuca.dev/cumbuca-docs/contribuir/editar-pagina/</loc>
+         <lastmod>2026-04-22</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.cumbuca.dev/cumbuca-docs/contribuir/remover-pagina/</loc>
+         <lastmod>2026-04-22</lastmod>
+    </url>
+</urlset>
