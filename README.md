@@ -82,3 +82,5 @@ Certifique-se de ler esses arquivos com atenção antes de contribuir. Se tiver 
 [github-discussions]: https://github.com/cumbucadev/comunidade/discussions
 [github-issues-doc]: https://docs.github.com/pt/issues/tracking-your-work-with-issues/creating-an-issue
 [github-issues]: https://github.com/cumbucadev/comunidade/issues
+
+teste comentário workflow
