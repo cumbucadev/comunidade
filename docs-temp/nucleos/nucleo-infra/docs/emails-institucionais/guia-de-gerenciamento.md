@@ -4,60 +4,95 @@ Este guia apresenta os procedimentos para gerenciamento dos emails institucionai
 
 As orientações descritas aqui destinam-se às pessoas responsáveis pela administração das contas, incluindo criação, manutenção e ajustes de acesso.
 
+## Conteúdos
+
+* [Acesso ao painel de gerenciamento](#acesso-ao-painel-de-gerenciamento)
+* [Criação de um novo email institucional](#criação-de-um-novo-email-institucional)
+* [Edição de um email existente](#edição-de-um-email-existente)
+* [Configuração de encaminhamento (forward)](#configuração-de-encaminhamento-forward)
+  * [Como configurar](#como-configurar)
+  * [Exemplo](#exemplo)
+  * [Comportamento esperado](#comportamento-esperado)
+* [Boas práticas de gerenciamento](#boas-práticas-de-gerenciamento)
+* [Configuração de envio via Gmail](#configuração-de-envio-via-gmail)
+* [Alterações e suporte](#alterações-e-suporte)
+
 ## Acesso ao painel de gerenciamento
 
-O gerenciamento das contas é realizado através do ISPConfig.
+O gerenciamento das contas é realizado por meio do ISPConfig.
 
-O acesso ao painel administrativo pode ser feito utilizando as credenciais disponíveis no 1Password, armazenadas no cofre Engenharia sob o nome `web admin panel`.
+As credenciais administrativas estão armazenadas no 1Password, no cofre Engenharia, sob o nome `web admin panel`:
 
-Acesse o painel em <https://isp.umbahost.com.br:2088/>.
+<img width="900" height="480" alt="image" src="https://github.com/user-attachments/assets/5391cb0d-a02d-400d-a5ce-75623456e946" />
 
-Após a autenticação, todas as operações relacionadas aos emails institucionais poderão ser realizadas pela interface.
+Acesse o painel em:
+
+[https://isp.umbahost.com.br:2088/](https://isp.umbahost.com.br:2088/)
+
+<img width="1712" height="756" alt="image" src="https://github.com/user-attachments/assets/ad8e933f-712e-4544-aa77-5b70072e6c07" />
+
+Após a autenticação, todas as operações relacionadas aos emails institucionais poderão ser realizadas pela interface administrativa.
 
 ## Criação de um novo email institucional
 
-A criação de uma nova conta deve seguir o padrão institucional adotado pela comunidade.
+A criação de novas contas deve seguir o padrão institucional adotado pela comunidade.
 
-No painel:
+No [painel](https://isp.umbahost.com.br:2088/):
 
 > Email → Contas de email → Adicionar novo email
 
+<img width="1712" height="756" alt="image" src="https://github.com/user-attachments/assets/7630663c-16e8-42f0-ab70-01c6c8e22923" />
+
 Preencha os campos principais:
 
-* **Nome**
-Identificação descritiva da conta
-Exemplo: Eventos, Documentação
+<img width="646" height="542" alt="image" src="https://github.com/user-attachments/assets/aaf71ad4-b23f-470b-9502-3d051d61d7e4" />
 
-* **Email**
-Nome do endereço
-Exemplo: eventos, documentacao
+### Nome
 
-* **Senha**
-Utilizar o 1Password para gerar a senha e armazenar as credenciais no cofre Engenharia seguindo o padrão:
+Identificação descritiva da conta.
+
+Exemplos:
+
+* Eventos
+* Documentação
+
+### Email
+
+Nome do endereço institucional.
+
+Exemplos:
+
+* eventos
+* documentacao
+
+### Senha
+
+Utilize o 1Password para gerar e armazenar a senha no cofre Engenharia seguindo o padrão:
 
 `webmail <email>@`
 
 Exemplos:
 
-`webmail eventos@`
-`webmail documentacao@`
+* `webmail eventos@`
+* `webmail documentacao@`
 
-* **Repetir Senha**
-Repetir a senha gerada
+### Repetir Senha
+
+Repita a senha gerada anteriormente.
 
 Os demais campos podem permanecer com as configurações padrão.
 
-Após salvar, a conta passa a existir imediatamente.
+Após salvar, a conta será criada imediatamente.
 
 ## Edição de um email existente
 
-Alterações em contas já criadas são realizadas diretamente na mailbox.
+As alterações em contas existentes são realizadas diretamente pela interface da conta.
 
-No painel:
+No [painel](https://isp.umbahost.com.br:2088/):
 
 > Email → Contas de email → Selecionar conta → Editar
 
-Entre os ajustes mais comuns estão:
+As alterações mais comuns incluem:
 
 * Redefinição de senha
 * Alteração de quota
@@ -68,13 +103,14 @@ Entre os ajustes mais comuns estão:
 
 O encaminhamento permite que mensagens enviadas para um email institucional sejam automaticamente redirecionadas para outros endereços.
 
-Esse é o modelo padrão de acesso adotado pela Cumbuca Dev, pois possibilita que múltiplos responsáveis recebam mensagens sem a necessidade de compartilhamento de credenciais.
+Esse é o modelo padrão de acesso adotado pela Cumbuca Dev, pois permite que múltiplas pessoas recebam mensagens sem necessidade de
+compartilhamento de credenciais.
 
 O email institucional permanece ativo normalmente, enquanto as mensagens também são entregues aos destinatários configurados.
 
 ### Como configurar
 
-No painel:
+No [painel](https://isp.umbahost.com.br:2088/):
 
 > Email → Contas de email → Selecionar conta → Editar
 
@@ -82,22 +118,23 @@ Ao editar a conta, localize o campo:
 
 **Enviar cópia para**
 
-Adicione os endereços de destino, separando múltiplos destinatários com vírgulas.
+Adicione os endereços de destino separados por vírgula.
 
 ### Exemplo
 
-Ao editar a conta comunicacao@cumbuca.dev:
+Ao editar a conta `eventos@cumbuca.dev`:
 
-* **Enviar cópia para**
-`responsavel1@gmail.com, responsavel2@gmail.com`
+| Campo             | Valor                                            |
+| ----------------- | ------------------------------------------------ |
+| Enviar cópia para | `responsavel1@gmail.com, responsavel2@gmail.com` |
 
 ### Comportamento esperado
 
 Após salvar:
 
-• Novas mensagens passam a ser encaminhadas automaticamente
-• O email institucional permanece ativo
-• Não há impacto no endereço original
+* Novas mensagens passarão a ser encaminhadas automaticamente
+* O email institucional permanecerá ativo
+* O endereço original não será alterado
 
 As alterações entram em vigor imediatamente.
 
@@ -121,52 +158,62 @@ No Gmail:
 
 > Configurações → Ver todas as configurações
 
-> Aba → Contas e Importação
+Acesse:
 
-> Seção → Enviar e-mail como → Adicionar outro endereço de e-mail
+> Contas e Importação → Enviar e-mail como → Adicionar outro endereço de e-mail
 
-Informe:
+<img width="1174" height="400" alt="image" src="https://github.com/user-attachments/assets/faead73b-cb8c-4588-bbf7-e1a3fa0b248e" />
 
-* **Nome**
-Identificação desejada
-Exemplo: Eventos Cumbuca Dev
+Preencha os campos:
 
-* **Endereço**
-Email institucional
-Exemplo: eventos@cumbuca.dev
+### Nome
+
+Identificação exibida para quem receberá os emails.
+
+Exemplo:
+
+`Eventos Cumbuca Dev`
+
+### Endereço
+
+Email institucional.
+
+Exemplo:
+
+`eventos@cumbuca.dev`
 
 Em seguida:
 
-* Desmarcar a opção `Tratar como um alias`
-* Clicar em **Próxima Etapa**
+1. Desmarque a opção `Tratar como um alias`
+2. Clique em **Próxima Etapa**
 
-## Configuração SMTP
+<img width="1464" height="1376" alt="image" src="https://github.com/user-attachments/assets/2a4ac24e-fc20-43db-824e-4d2508426272" />
 
-Utilize as credenciais disponíveis no 1Password.
+### Configuração SMTP
+
+Na próxima tela, utilize as credenciais armazenadas no 1Password.
 
 Padrão:
 
 `webmail <email>@`
 
-Preencha:
+Preencha os campos da seguinte forma:
 
-* **Nome de usuário**
-Email institucional completo
+| Campo           | Valor                        |
+| --------------- | ---------------------------- |
+| Servidor SMTP   | `isp.umbahost.com.br`        |
+| Porta           | `587`                        |
+| Segurança       | `TLS`                        |
+| Nome de usuário | Email institucional completo |
+| Senha           | Senha da conta               |
 
-* **Senha**
-Senha da mailbox
+<img width="1464" height="1376" alt="image" src="https://github.com/user-attachments/assets/8b7b86d1-38b4-4693-88a3-fcddf0e3fe7b" />
 
-Manter:
-
-Servidor SMTP → `isp.umbahost.com.br`
-Porta → `587`
-Segurança → `TLS`
-
-Não alterar os demais campos.
+Os demais campos podem permanecer com as configurações padrão.
 
 Após salvar, o Gmail enviará um email de verificação.
 
-Uma vez confirmado, o endereço institucional ficará disponível como opção no campo **“De:”**.
+Após a confirmação, o endereço institucional ficará disponível no campo **“De:”** durante o envio de emails.
 
 ## Alterações e suporte
 
@@ -177,4 +224,6 @@ Situações que envolvam:
 * Mudanças de acesso
 * Problemas de envio ou recebimento
 
-Devem ser registradas por meio de issue direcionada ao **Núcleo Infra** em <https://github.com/cumbucadev/comunidade/issues>.
+Devem ser registradas por meio de issue direcionada ao **Núcleo Infra** em:
+
+[https://github.com/cumbucadev/comunidade/issues](https://github.com/cumbucadev/comunidade/issues)
