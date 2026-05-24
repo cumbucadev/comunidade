@@ -17,6 +17,7 @@ theme:
   logo: assets/img/logo-transparent.png
   favicon: assets/img/logo-transparent.png
   language: pt-BR
+  custom_dir: docs/overrides
   features:
     - navigation.footer
     - navigation.instant
@@ -54,6 +55,7 @@ nav:
               - cumbuca-docs/contribuir/editar-pagina.md
               - cumbuca-docs/contribuir/adicionar-pagina.md
               - cumbuca-docs/contribuir/remover-pagina.md
+              - cumbuca-docs/contribuir/nova-pagina.md
 
 #######
 # Development settings
@@ -96,6 +98,7 @@ extra_css:
 # custom scripts loaded on every page
 extra_javascript:
   - assets/js/sidebar.js
+  - assets/js/font-toggle.js
 
 extra:
   social:
